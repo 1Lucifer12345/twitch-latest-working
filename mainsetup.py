@@ -22,9 +22,9 @@ twitch_miner = TwitchChannelPointsMiner(
     password="",           # If no password will be provided, the script will ask interactively
     claim_drops_startup=False,                  # If you want to auto claim all drops from Twitch inventory on the startup
     priority=[       
-        Priority.ORDER                          # Custom priority in this case for example:
+        Priority.ORDER,                          # Custom priority in this case for example:
         Priority.STREAK,                        # - We want first of all to catch all watch streak from all streamers
-        Priority.DROPS,                         # - When we don't have anymore watch streak to catch, wait until all drops are collected over the streamers
+        Priority.DROPS                         # - When we don't have anymore watch streak to catch, wait until all drops are collected over the streamers
                                   # - When we have all of the drops claimed and no watch-streak available, use the order priority (POINTS_ASCENDING, POINTS_DESCEDING)
     ],
     enable_analytics=False,                     # Disables Analytics if False. Disabling it significantly reduces memory consumption
